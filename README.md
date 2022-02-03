@@ -4,7 +4,7 @@
 
 **EXAMPLE:**
 
-	gcloud config list
+	**gcloud config list**
 
 	[compute]
 
