@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-#export ZONE=us-west1-b
 for PAIR in $(\
   gcloud compute instances list \
   --project=${PROJECT} \
