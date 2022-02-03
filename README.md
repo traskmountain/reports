@@ -26,4 +26,4 @@
 ./master
 
 **NOTES**
-"master" is the main script which calls get_projects and then get_cpu_ram scripts. 
+"master" is the main script which calls get_projects, get_cpu_ram, and calculate scripts. 
