@@ -1,0 +1,6 @@
+#!/bin/bash
+
+awk -F " " '{Total=Total+$3} END{print "Total CPU= " Total}' report.txt
+
+
+awk -F " " '{Total=Total+$5} END{print "Total RAM= " Total}' report.txt

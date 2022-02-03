@@ -1,4 +1,10 @@
 #!/bin/bash
+# Get Date
+DATE=$(date +%Y-%m-%d)
+echo "$DATE"
+
+mv report.txt report_$DATE.txt
+
 # Grab Projects
 echo "##########"
 echo "Grabbing projects and creating projects.txt"
@@ -30,21 +36,23 @@ echo "##########"
 
 export PROJECT=$PROJECT1
 echo "$PROJECT1"
-./cpu_ram
+./get_cpu_ram
 export PROJECT=$PROJECT2
 echo "$PROJECT2"
-./cpu_ram
+./get_cpu_ram
 export PROJECT=$PROJECT3
 echo "$PROJECT3"
-./cpu_ram
+./get_cpu_ram
 export PROJECT=$PROJECT4
 echo "$PROJECT4"
-./cpu_ram
+./get_cpu_ram
 export PROJECT=$PROJECT5
 echo "$PROJECT5"
-./cpu_ram
+./get_cpu_ram
 
-
-
+echo "##########"
+echo "TOTAL"
+echo "##########"
+./calculate
 
 

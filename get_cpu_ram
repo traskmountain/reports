@@ -1,5 +1,11 @@
 #!/bin/bash
 #export PROJECT=dev-team-project-1
+#export DATE='$(date +%Y-%m-%d)'
+#echo "$DATE"
+
+#mv report.txt "report$DATE.txt"
+#touch report.txt
+
 export ZONE=us-west1-b
 for PAIR in $(\
   gcloud compute instances list \
@@ -27,6 +33,9 @@ do
       --zone=${ZONE} \
       --format="csv[no-heading](guestCpus,memoryMb)")
     IFS=, read CPU MEM <<< ${CPU_MEMORY}
-    printf "%s: vCPUs: %s; Mem: %s\n" ${INSTANCE} ${CPU} ${MEM}
+    #printf "%s: vCPUs: %s; Mem: %s\n" ${INSTANCE} ${CPU} ${MEM} >> report.txt
+    printf "%s vCPUs %s Mem %s\n" ${INSTANCE} ${CPU} ${MEM}
+    printf "%s vCPUs %s Mem %s\n" ${INSTANCE} ${CPU} ${MEM} >> report.txt
+    #echo "%s: vCPUs: %s; Mem: %s\n" ${INSTANCE} ${CPU} ${MEM} > report.txt
   fi
 done
