@@ -1,8 +1,8 @@
 # GET CPU AND RAM PROVISIONED ACROSS MULTIPLE PROJECTS
-Prerequisites:
+**Prerequisites:**
 1) gcloud - Ensure you have your environment configured to execute the gcloud
 
-EXAMPLE: 
+**EXAMPLE:**
 
 gcloud config list
 
@@ -22,8 +22,8 @@ project = dev-project-1
 
 2) Permissions - You will need write permissions to the folder you use here
 
-To Execute:
+**To Execute:**
 ./master
 
-Notes:
+**Notes:**
 -"master" is the main script which calls get_projects and then cpu_ram scripts. 
