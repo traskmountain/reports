@@ -1,0 +1,5 @@
+#!/bin/bash
+# Use gcloud to list all projects and create projects.txt
+gcloud projects list --format 'value(project_id)' > projects.txt
+
+more projects.txt

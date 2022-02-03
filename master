@@ -1,0 +1,50 @@
+#!/bin/bash
+# Grab Projects
+echo "##########"
+echo "Grabbing projects and creating projects.txt"
+echo "##########"
+echo "PROJECT LIST"
+echo "##########"
+./get_projects
+
+
+# Read file projects.txt and define vars
+PROJECT1=$(more projects.txt  | head -1)
+PROJECT2=$(more projects.txt  | awk 'NR==2')
+PROJECT3=$(more projects.txt  | awk 'NR==3')
+PROJECT4=$(more projects.txt  | awk 'NR==4')
+PROJECT5=$(more projects.txt  | awk 'NR==5')
+PROJECT6=$(more projects.txt  | awk 'NR==6')
+PROJECT7=$(more projects.txt  | awk 'NR==7')
+
+#echo "$PROJECT1"
+#echo "$PROJECT2"
+#echo "$PROJECT3"
+#echo "$PROJECT4"
+#echo "$PROJECT5"
+
+## Call scripts
+echo "##########"
+echo "PROJECTS AND INSTANCES"
+echo "##########"
+
+export PROJECT=$PROJECT1
+echo "$PROJECT1"
+./cpu_ram
+export PROJECT=$PROJECT2
+echo "$PROJECT2"
+./cpu_ram
+export PROJECT=$PROJECT3
+echo "$PROJECT3"
+./cpu_ram
+export PROJECT=$PROJECT4
+echo "$PROJECT4"
+./cpu_ram
+export PROJECT=$PROJECT5
+echo "$PROJECT5"
+./cpu_ram
+
+
+
+
+
