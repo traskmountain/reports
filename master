@@ -3,9 +3,13 @@
 DATE=$(date +%Y-%m-%d)
 echo "$DATE"
 
+# Archive report.txt
 mv report.txt report_$DATE.txt
 
 # Grab Projects
+if [ ! -f projects.txt ];
+then
+    echo "projects.txt does not exist in folder"
 echo "##########"
 echo "Grabbing projects and creating projects.txt"
 echo "##########"
@@ -13,8 +17,13 @@ echo "PROJECT LIST"
 echo "##########"
 ./get_projects
 
+else
+    echo "projects.txt found... "
+    more projects.txt
+fi
 
 # Read file projects.txt and define vars
+# May need to add more Projects
 PROJECT1=$(more projects.txt  | head -1)
 PROJECT2=$(more projects.txt  | awk 'NR==2')
 PROJECT3=$(more projects.txt  | awk 'NR==3')
@@ -22,7 +31,15 @@ PROJECT4=$(more projects.txt  | awk 'NR==4')
 PROJECT5=$(more projects.txt  | awk 'NR==5')
 PROJECT6=$(more projects.txt  | awk 'NR==6')
 PROJECT7=$(more projects.txt  | awk 'NR==7')
+PROJECT8=$(more projects.txt  | awk 'NR==8')
+PROJECT9=$(more projects.txt  | awk 'NR==9')
+PROJECT10=$(more projects.txt  | awk 'NR==10')
+PROJECT11=$(more projects.txt  | awk 'NR==11')
+PROJECT12=$(more projects.txt  | awk 'NR==12')
+PROJECT13=$(more projects.txt  | awk 'NR==13')
+PROJECT14=$(more projects.txt  | awk 'NR==14')
 
+# Uncomment to debug
 #echo "$PROJECT1"
 #echo "$PROJECT2"
 #echo "$PROJECT3"
@@ -30,6 +47,8 @@ PROJECT7=$(more projects.txt  | awk 'NR==7')
 #echo "$PROJECT5"
 
 ## Call scripts
+## NOTE: Add more iterations below if needed 
+
 echo "##########"
 echo "PROJECTS AND INSTANCES"
 echo "##########"
@@ -37,19 +56,37 @@ echo "##########"
 export PROJECT=$PROJECT1
 echo "$PROJECT1"
 ./get_cpu_ram
+
 export PROJECT=$PROJECT2
 echo "$PROJECT2"
 ./get_cpu_ram
+
 export PROJECT=$PROJECT3
 echo "$PROJECT3"
 ./get_cpu_ram
+
 export PROJECT=$PROJECT4
 echo "$PROJECT4"
 ./get_cpu_ram
+
 export PROJECT=$PROJECT5
 echo "$PROJECT5"
 ./get_cpu_ram
 
+#export PROJECT=$PROJECT6
+#echo "$PROJECT6"
+#./get_cpu_ram
+
+#export PROJECT=$PROJECT7
+#echo "$PROJECT7"
+#./get_cpu_ram
+
+#export PROJECT=$PROJECT8
+#echo "$PROJECT8"
+#./get_cpu_ram
+
+
+# Call calculate 
 echo "##########"
 echo "TOTAL"
 echo "##########"

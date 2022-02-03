@@ -1,12 +1,7 @@
 #!/bin/bash
-#export PROJECT=dev-team-project-1
-#export DATE='$(date +%Y-%m-%d)'
-#echo "$DATE"
 
-#mv report.txt "report$DATE.txt"
-#touch report.txt
 
-export ZONE=us-west1-b
+#export ZONE=us-west1-b
 for PAIR in $(\
   gcloud compute instances list \
   --project=${PROJECT} \

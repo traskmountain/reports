@@ -1,6 +1,10 @@
 #!/bin/bash
+# SUM - CPU 
+awk -F " " '{Total=Total+$3} END{print "Total CPU= " Total}' report.txt > FinalReport.txt
 
-awk -F " " '{Total=Total+$3} END{print "Total CPU= " Total}' report.txt
+# SUM - RAM
+awk -F " " '{Total=Total+$5} END{print "Total RAM MB= " Total}' report.txt >> FinalReport.txt
 
+# Print Report
+more FinalReport.txt
 
-awk -F " " '{Total=Total+$5} END{print "Total RAM= " Total}' report.txt

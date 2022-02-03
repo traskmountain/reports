@@ -1,4 +1,4 @@
-# GET CPU AND RAM PROVISIONED ACROSS MULTIPLE PROJECTS
+# GCP -- GET CPU AND RAM PROVISIONED ACROSS MULTIPLE PROJECTS
 **PREREQUISITES:**
 1) gcloud - Ensure you have your environment configured to execute the gcloud
 
