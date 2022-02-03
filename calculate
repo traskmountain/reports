@@ -10,7 +10,7 @@ echo "##########"
 
 
 # Sum Projects
-echo "Projecs scanned:"
+echo "Projects scanned:"
 wc -l projects.txt | awk '{print $1}'
 echo "##########"
 
