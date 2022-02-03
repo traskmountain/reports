@@ -5,7 +5,7 @@ These scripts iterate through GCP projects and instances to produce the total CP
 **PREREQUISITES:**
 1) gcloud - Ensure you have your environment configured to execute the gcloud
 
-**EXAMPLE:**
+**EXAMPLE OF WORKING GCLOUD CONFIG:**
 
 	gcloud config list
 
