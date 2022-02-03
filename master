@@ -82,7 +82,6 @@ echo "$PROJECT4"
 ./get_cpu_ram
 echo "##########"
 
-
 export PROJECT=$PROJECT5
 echo "$PROJECT5"
 ./get_cpu_ram

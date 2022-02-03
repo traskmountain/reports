@@ -27,3 +27,5 @@
 
 **NOTES**
 "master" is the main script which calls get_projects, get_cpu_ram, and calculate scripts. 
+
+If you have many projects, you may need to either increase the iterations through get_cpu_ram by uncommenting lines in the block starting at line 59. You may also need to add iterations here. 
