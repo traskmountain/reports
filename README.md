@@ -3,7 +3,7 @@
 These scripts iterate through GCP projects and instances to produce the total CPU and RAM provisioned. The output is printed to the screen, and can be seen in FinalReport.txt once the process is complete. 
 
 **PREREQUISITES:**
-1) gcloud - Ensure you have your environment configured to execute the gcloud
+**1)** gcloud - Ensure you have your environment configured to execute the gcloud
 
 **EXAMPLE OF WORKING GCLOUD CONFIG:**
 
@@ -25,9 +25,9 @@ Results should look something like this:
 
 	project = dev-project-1
 
-2) (Optional) - Prepare projects.txt. This is a flat file with one project-id per line. If you do not prepare this file the process will gather all CPU and RAM across all projects for which you have access.
+**2)** (Optional) - Prepare projects.txt. This is a flat file with one project-id per line. If you do not prepare this file the process will gather all CPU and RAM across all projects for which you have access.
 
-3) Permissions - You will need write permissions to the folder you use here
+**3)** Permissions - You will need write permissions to the folder you use here
 
 **TO EXECUTE:**
 ./master
