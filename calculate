@@ -1,9 +1,31 @@
 #!/bin/bash
+# Get Date
+DATE=$(date +%Y-%m-%d-%s)
+echo "$DATE"
+
+# Archive old report
+mv FinalReport.txt FinalReport_$DATE.txt
+
+echo "##########"
+
+
+# Sum Projects
+echo "Projecs scanned:"
+wc -l projects.txt | awk '{print $1}'
+echo "##########"
+
+# Sum Instances
+echo "Instances found:"
+wc -l report.txt | awk '{print $1}' 
+
+#echo "##########"
+
 # SUM - CPU 
-awk -F " " '{Total=Total+$3} END{print "Total CPU= " Total}' report.txt > FinalReport.txt
+awk -F " " '{Total=Total+$3} END{print "Total CPU    | = " Total}' report.txt > FinalReport.txt
+echo "##########"
 
 # SUM - RAM
-awk -F " " '{Total=Total+$5} END{print "Total RAM MB= " Total}' report.txt >> FinalReport.txt
+awk -F " " '{Total=Total+$5} END{print "Total RAM MB | = " Total}' report.txt >> FinalReport.txt
 
 # Print Report
 more FinalReport.txt

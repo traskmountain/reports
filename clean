@@ -1,0 +1,4 @@
+#!/bin/bash 
+rm report*
+rm FinalReport*
+rm projects*

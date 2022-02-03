@@ -1,6 +1,6 @@
 #!/bin/bash
 # Get Date
-DATE=$(date +%Y-%m-%d)
+DATE=$(date +%Y-%m-%d-%s)
 echo "$DATE"
 
 # Archive report.txt
@@ -9,17 +9,26 @@ mv report.txt report_$DATE.txt
 # Grab Projects
 if [ ! -f projects.txt ];
 then
-    echo "projects.txt does not exist in folder"
-echo "##########"
-echo "Grabbing projects and creating projects.txt"
-echo "##########"
-echo "PROJECT LIST"
-echo "##########"
+	echo "projects.txt does not exist in folder"
+	echo "##########"
+	echo "Grabbing projects and creating projects.txt"
+	echo "##########"
+	echo "PROJECT LIST"
+	echo "##########"
 ./get_projects
 
+# Get number of projects found
+PROJECTCOUNT=$(wc -l projects.txt | awk '{print $1}')
+echo "$PROJECTCOUNT Projects found"
+
 else
-    echo "projects.txt found... "
-    more projects.txt
+    	echo "projects.txt found... "
+    	more projects.txt
+	echo "##########"
+	# Get number of projects found
+	PROJECTCOUNT=$(wc -l projects.txt | awk '{print $1}')
+	echo "$PROJECTCOUNT Projects found"
+	
 fi
 
 # Read file projects.txt and define vars

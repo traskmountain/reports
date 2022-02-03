@@ -1,2 +1,0 @@
-Total CPU= 2
-Total RAM MB= 1228
