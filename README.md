@@ -7,8 +7,8 @@ These scripts iterate through GCP projects and instances to produce the total CP
 
 **EXAMPLE OF WORKING GCLOUD CONFIG:**
 
-	gcloud config list
-
+Execute this:	**gcloud config list**
+Results should look something like this: 
 	[compute]
 
 	region = us-ast
