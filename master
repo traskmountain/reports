@@ -56,22 +56,28 @@ echo "##########"
 export PROJECT=$PROJECT1
 echo "$PROJECT1"
 ./get_cpu_ram
+echo "##########"
 
 export PROJECT=$PROJECT2
 echo "$PROJECT2"
 ./get_cpu_ram
+echo "##########"
 
 export PROJECT=$PROJECT3
 echo "$PROJECT3"
 ./get_cpu_ram
+echo "##########"
 
 export PROJECT=$PROJECT4
 echo "$PROJECT4"
 ./get_cpu_ram
+echo "##########"
+
 
 export PROJECT=$PROJECT5
 echo "$PROJECT5"
 ./get_cpu_ram
+echo "##########"
 
 #export PROJECT=$PROJECT6
 #echo "$PROJECT6"

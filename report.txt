@@ -1,1 +1,2 @@
+instance-1 vCPUs 1 Mem 614
 sykes-1 vCPUs 1 Mem 614
