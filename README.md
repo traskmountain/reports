@@ -4,26 +4,26 @@
 
 **EXAMPLE:**
 
-gcloud config list
+	gcloud config list
 
-[compute]
+	[compute]
 
-region = us-ast
+	region = us-ast
 
-zone = us-east-b
+	zone = us-east-b
 
-[core]
+	[core]
 
-account = user@user.com
+	account = user@user.com
 
-disable_usage_reporting = True
+	disable_usage_reporting = True
 
-project = dev-project-1
+	project = dev-project-1
 
 2) Permissions - You will need write permissions to the folder you use here
 
-**To Execute:**
+**TO EXECUTE:**
 ./master
 
-**Notes:**
+**NOTES**
 -"master" is the main script which calls get_projects and then cpu_ram scripts. 
